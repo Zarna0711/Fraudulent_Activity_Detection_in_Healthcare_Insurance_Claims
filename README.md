@@ -2,8 +2,9 @@
 
 Claim-level, ensemble-validated fraud-pattern detection on CMS DE-SynPUF
 inpatient claims. A ground-up redesign of an earlier rule-level pipeline —
-see `docs/METHODOLOGY.md` for exactly what changed and why. Built and run
-end-to-end against real CMS DE-SynPUF Inpatient Claims (Sample 2) data.
+see the "Honest limitations" section below for exactly what changed and
+why. Built and run end-to-end against real CMS DE-SynPUF Inpatient Claims
+(Sample 2) data.
 
 ## Pipeline
 
@@ -19,8 +20,10 @@ end-to-end against real CMS DE-SynPUF Inpatient Claims (Sample 2) data.
 
 ## Quickstart (synthetic demo data, runs end-to-end immediately)
 
+Requires: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `pyod`, `mlxtend`
+
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib seaborn scikit-learn pyod mlxtend
 cd data && python generate_synthetic_data.py && cd ..
 cd scripts
 python 01_feature_engineering.py
